@@ -17,3 +17,7 @@ Route::middleware(['web'])->group(function () {
     Route::post('/encender-led', [picontroller::class, 'encenderLed'])->name('encender');
     Route::post('/apagar-led', [picontroller::class, 'apagarLed'])->name('apagar');
 });
+
+Route::get('/', function () {
+    return view('welcome');
+});
