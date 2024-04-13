@@ -9,20 +9,24 @@
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
 </head>
-<body class="bg-gray-100 flex justify-center items-center h-screen">
-    <div class="container">
-        <h1 class="text-3xl mb-8">Control de LED</h1>
+<body class="bg-gray-300">
+    <div class="mt-40">
+        <h1 class="text-3xl mb-8 flex justify-center items-center">Control de LED</h1>
         <form action="{{ route('encender') }}" method="POST" class="mb-4">
             @csrf
+            <div class="flex flex-col justify-center items-center">
             <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 Encender LED
             </button>
+            </div>
         </form>
         <form action="{{ route('apagar') }}" method="POST">
             @csrf
+            <div class="flex flex-col justify-center items-center">
             <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 Apagar LED
             </button>
+            </div>
         </form>
     </div>
 </body>
