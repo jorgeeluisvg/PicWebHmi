@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LedController extends Controller
+class picontroller extends Controller
 {
     public function encenderLed()
     {

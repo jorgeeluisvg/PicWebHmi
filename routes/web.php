@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\picontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(['web'])->group(function () {
+    Route::post('/encender-led', [picontroller::class, 'encenderLed'])->name('encender');
+    Route::post('/apagar-led', [picontroller::class, 'apagarLed'])->name('apagar');
 });
